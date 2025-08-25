@@ -36,7 +36,7 @@ A comprehensive Library Management System built with MERN stack featuring book r
 **The easiest way to run the project - zero configuration required!**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/YasinzHyper/LibraryManagementSystem_MERN-with-Book-Recommendation-Algorithm.git
 cd LibraryManagementSystem_MERN-with-Book-Recommendation-Algorithm
 docker-compose up -d
 ```
