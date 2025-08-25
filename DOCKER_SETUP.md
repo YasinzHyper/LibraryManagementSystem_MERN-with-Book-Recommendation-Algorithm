@@ -31,7 +31,7 @@ This guide explains how to run the Library Management System using Docker and Do
 
 1. **Clone the repository** (if you haven't already):
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/YasinzHyper/LibraryManagementSystem_MERN-with-Book-Recommendation-Algorithm.git
    cd LibraryManagementSystem_MERN-with-Book-Recommendation-Algorithm
    ```
 
