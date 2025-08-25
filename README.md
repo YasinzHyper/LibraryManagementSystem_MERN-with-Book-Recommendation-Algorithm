@@ -1,45 +1,62 @@
 # Library Management System 📚
 
-Its a Project related to Books management for a Libraries 📜.
+A comprehensive Library Management System built with MERN stack featuring book recommendation algorithms.
 
 **_NOTE : This isn't an Ecommerce Website (There is no Payment System here)_**
 
-FrontEnd is divided into two parts (ADMIN && CLIENT)
+## Features
 
-ADMIN can do -  
-`1.manage books i.e. add/remove/update/delete books.`
+**ADMIN can:**  
+- Manage books (add/remove/update/delete)
+- Check user details (name/id/borrowed books/etc)
+- Confirm user book requests & book returns
+- Manage book charges (late fees)
 
-`2.Check user' details i.e. name/id/borrowed book/etc`
+**CLIENT can:**  
+- Browse books and check availability
+- Request books
+- View/manage profile and dashboard
+- Get personalized book recommendations
 
-`3.Confirm user's book request && Confirm book Return`
+## Tech Stack
 
-`4.Manage Book Charges(Extra fee's for not returing book in time)`
+**Frontend:** React, Bootstrap  
+**Backend:** Node.js, Express, MongoDB  
+**Containerization:** Docker, Docker Compose
 
-CLIENT can do -  
-`1.Basic book surfing's and checking availablities`
+## Version Specifications
 
-`2.Request for a book`
+- NodeJS: v18.16.0
+- Express: v4.18.2
+- ReactJS: v18.2.0
+- MongoDB: v6.0.6
 
-`3.Viewing/CRUD Operations on Profile || Dashboard`
+## Quick Start with Docker (Recommended)
 
-## Version Specifications :
+**The easiest way to run the project - zero configuration required!**
 
-1. NodeJS : v18.16.0
-2. Express : v4.18.2
-3. ReactJS : v18.2.0
-4. Using MongoDB: v6.0.6
-   Using Mongosh: v2.0.2
+```bash
+git clone <repository-url>
+cd LibraryManagementSystem_MERN-with-Book-Recommendation-Algorithm
+docker-compose up -d
+```
 
-## Demo
+**That's it!** Access the application at:
+- **Frontend**: http://localhost:5173
+- **Backend**: http://localhost:5000  
+- **MongoDB**: localhost:27017
 
-![](https://mraalu.pythonanywhere.com/media/project/LMS.gif)
+**Login Credentials**:
+- **Admin**: admin@gmail.com / admin
+- **Test User**: user@gmail.com / admin
 
-## Documentation
+> For detailed Docker setup instructions, see [DOCKER_SETUP.md](./DOCKER_SETUP.md)
 
-You can find the Documentation inside /docs/ folder
-![](./docs/LMS.pdf)
+---
 
-## How to run Project locally :
+## Manual Setup (Alternative)
+
+If you prefer to run without Docker:
 
 1. Clone the project
 
@@ -68,49 +85,37 @@ You can find the Documentation inside /docs/ folder
   npm run dev
 ```
 
-5. Once you Run Backend(Server), database will be created automatically on Mongodb & You just have to Import the TABLE Data which is Stored in folder 'mongoDatabase'
+5. Once you run the Backend, database will be created automatically on MongoDB. Import the sample data from the `mongoDatabase` folder into respective collections.
 
-**For Backend :**
-
-`make sure your MondoDB server is running (you can check this via windows Services)`
-
-`open the mongoDB Compass (GUI for mongodb,download if u dont have) and from there you can import the data into respective collections` 
-
-```bash
-Import respective .JSON file into database Collection
-```
-
-## How to run Project using Docker :
-
-- Populate localhost mongodb database (explained in Step5 above).
-- goto .env and make sure to use correct 'CONNECTION_URL'
-- then, goto main folder location i.e. cd LIBRARYMANAGEMENTSYSTEM_MERN/ and use command :
-
-```
-docker-compose up
-```
+**For Backend:**
+- Ensure MongoDB server is running
+- Open MongoDB Compass and import the JSON files from `mongoDatabase/` folder
 
 ## Login Credentials
 
-Starter Login Credentials : (Make sure to import database collections i.e. userdetails json file into the collections)
+**Admin User**:
+- Email: admin@gmail.com  
+- Password: admin
 
-1. ADMIN (user_type = "admin_user" ):
+**Test User**:
+- Email: user@gmail.com
+- Password: admin
 
-```
- Email : admin@gmail.com , Password : admin
-```
+## Documentation
 
-2. Normal User Can be created by SignUp Page (user_type = "normal_user" ):
+You can find detailed documentation in the `/docs/` folder.
+
+![](./docs/LMS.pdf)
+
+## Demo
+
+![](https://mraalu.pythonanywhere.com/media/project/LMS.gif)
 
 ## Lessons Learned
 
-1. Code Comments are Loveletter's you leave behind for your future self.
-2. If you cant Solve it, address it for your Future Self. He sure can!
+1. Code Comments are love letters you leave behind for your future self
+2. If you can't solve it, address it for your future self - they sure can!
 
-## Tech Stack
+---
 
-**Frontend :** React, Bootstrap
-
-**Backend :** Node, Express, MongoDB
-
-#### Developed By :- [@MrAalu](https://www.github.com/MrAalu)
+#### Developed By: [@MrAalu](https://www.github.com/MrAalu)

@@ -1,13 +1,25 @@
-FROM node:18-alpine
+FROM node:18-alpine AS development
 
 WORKDIR /app
 
-COPY package.json .
+# Copy package files
+COPY package*.json ./
 
-RUN npm i
+# Install dependencies
+RUN npm ci
 
+# Copy source code
 COPY . .
+
+# Create non-root user for security
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+# Change ownership of the app directory
+RUN chown -R nodejs:nodejs /app
+USER nodejs
 
 EXPOSE 5173
 
-CMD [ "npm", "run", "dev" ]
+# For development with hot reload
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
