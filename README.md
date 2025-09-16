@@ -43,7 +43,7 @@ docker-compose up -d
 
 **That's it!** Access the application at:
 - **Frontend**: http://localhost:5173
-- **Backend**: http://localhost:5000  
+- **Backend**: http://localhost:5050  
 - **MongoDB**: localhost:27017
 
 **Login Credentials**:

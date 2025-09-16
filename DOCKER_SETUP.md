@@ -47,7 +47,7 @@ This guide explains how to run the Library Management System using Docker and Do
 
 4. **Access the application**:
    - Frontend: http://localhost:5173
-   - Backend API: http://localhost:5000
+   - Backend API: http://localhost:5050
    - MongoDB: localhost:27017
 
 ## Default Login Credentials
@@ -72,9 +72,9 @@ This guide explains how to run the Library Management System using Docker and Do
 - **Initialization**: Automatically loads data from `/mongoDatabase/*.json` files
 
 ### Backend (backend)
-- **Port**: 5000
+- **Port**: 5050
 - **Environment**: Production-ready Node.js application
-- **Health Check**: Available at http://localhost:5000/health
+- **Health Check**: Available at http://localhost:5050/health
 - **Data Persistence**: Uploads stored in Docker volume `backend_uploads`
 
 ### Frontend (frontend)
@@ -161,7 +161,7 @@ docker-compose exec mongodb mongorestore --db librarymgmtsystem /data/restore/li
 ### Services not starting:
 1. Check if ports are available:
    ```bash
-   netstat -tulpn | grep -E "(5000|5173|27017)"
+   netstat -tulpn | grep -E "(5050|5173|27017)"
    ```
 2. View service logs:
    ```bash
@@ -181,7 +181,7 @@ docker-compose exec mongodb mongorestore --db librarymgmtsystem /data/restore/li
 ### Frontend can't connect to backend:
 1. Verify backend health:
    ```bash
-   curl http://localhost:5000/health
+   curl http://localhost:5050/health
    ```
 2. Check network connectivity:
    ```bash
